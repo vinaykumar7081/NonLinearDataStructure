@@ -72,18 +72,19 @@ namespace Non_LinearDataStructure
                     linkedList.Remove(foundItem);
                 }
             }
-            public void Display()
+        public void Display()
+        {
+            foreach (var linkedList in items)
             {
-                foreach (var linkedList in items)
-                {
-                    if (linkedList != null)
+                if (linkedList != null)
 
-                        foreach (KeyValue<K, V> keyvalue in linkedList)
-                        {
+                    foreach (KeyValue<K, V> keyvalue in linkedList)
+                    {
 
-                            Console.WriteLine(keyvalue.key + " " + keyvalue.value);
-                        }
-                }
+                        Console.WriteLine(keyvalue.key + ":-> " + keyvalue.value+ " ");
+                    }
             }
+            Console.WriteLine(" ");
+        }
     }
 }
